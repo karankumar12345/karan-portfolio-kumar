@@ -30,7 +30,7 @@ const techIcons: Record<string, string> = {
 
 export default function ProjectSection() {
   return (
-    <section className="py-12 px-6 bg-gray-900 text-white lg:p-[10%]">
+    <section className="py-12 px-6 bg-gray-900 text-white lg:p-[10%]" id="Projects">
       <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (

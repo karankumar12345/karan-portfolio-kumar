@@ -15,7 +15,7 @@ import LeetCodeStats from "./LeetcodeState";
 
 const ExperienceSection = () => {
   return (
-    <section className="py-10 px-5 md:px-20 bg-gray-900">
+    <section className="py-10 px-5 md:px-20 bg-gray-900" id="Experience">
       <h2 className="text-3xl font-bold text-center mb-6"><ColourfulText text="Experience"/></h2>
       <div className="grid md:grid-cols-2 gap-6">
         <Card className="p-5 flex gap-4 items-center">
@@ -52,7 +52,7 @@ const ExperienceSection = () => {
           <CardDescription>
             <h3 className="text-xl font-semibold"> <ColourfulText text="LeetCode Profile"/></h3>
             <p>Demonstrated problem-solving skills through algorithmic challenges.</p>
-            <Link href="https://leetcode.com/your-profile" className="text-blue-600 hover:underline">View LeetCode</Link>
+            <Link href="https://leetcode.com/Karan1_2" className="text-blue-600 hover:underline">View LeetCode</Link>
           </CardDescription>
         </Card>
       </div>

@@ -25,7 +25,7 @@ const Footer = () => {
     <footer className="w-full pt-20 pb-10 bg-gray-900 text-white" id="contact">
    
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center justify-center">
         <h1 className="heading lg:max-w-[45vw]">
           Ready to take <span className="text-purple">your</span> digital
           presence to the next level?
@@ -42,12 +42,12 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
+      <div className=" flex mt-16 flex-col-reverse justify-center items-center gap-5">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2025 karan kumar
+          Copyright © 2025 karan kumar 
         </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="flex items-center justify-between md:gap-3 gap-6">
           {socialMedia.map((info) => (
             <div
               key={info.id}
