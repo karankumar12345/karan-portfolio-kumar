@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Software Engineer",
     "Portfolio",
     
-    
+
     "LeetCode",
     "DSA",
   ],  
@@ -60,6 +60,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+      <meta name="google-site-verification" content="google880c9fd3ac54d264.html" />
+
         <link rel="icon" href="/karankumar.jpg" sizes="any" />
         <meta property="og:image" content="https://photos.fife.usercontent.google.com/pw/AP1GczP3DE3kpLXWFTYZfHzGYDysfdnCrjctV91nNg-PQ_ftJl74EJhsV_lI=w958-h539-s-no-gm?authuser=0" />
         <meta name="twitter:image" content="https://photos.fife.usercontent.google.com/pw/AP1GczP3DE3kpLXWFTYZfHzGYDysfdnCrjctV91nNg-PQ_ftJl74EJhsV_lI=w958-h539-s-no-gm?authuser=0" />
