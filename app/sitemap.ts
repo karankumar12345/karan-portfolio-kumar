@@ -8,5 +8,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly', // Since portfolio content doesn't change frequently
       priority: 1.0, // Highest priority because it's the only page
     },
+    
   ];
 }
