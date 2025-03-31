@@ -2,7 +2,7 @@
 import AboutSection from '@/components/AboutSection'
 import ExperienceSection from '@/components/ExperienceSection'
 import Footer from '@/components/Footer'
-import GitHubStats from '@/components/GithubStats'
+
 import HeroSection from '@/components/HeroSection'
 
 // import JustDemo from '@/components/JustDemo'

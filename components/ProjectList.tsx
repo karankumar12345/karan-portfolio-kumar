@@ -1,3 +1,4 @@
+"use client";
 import projects from "@/data/Project";
 
 import { ColourfulText } from "./ui/ColorFull-Text";

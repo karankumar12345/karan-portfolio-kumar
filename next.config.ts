@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
       ignoreBuildErrors:true
     }
     ,  experimental: {
-      serverActions: true, // Enables server actions
+      serverActions: {}// Enables server actions
     },
 };
 

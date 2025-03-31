@@ -1,3 +1,5 @@
+
+"use client"
 import dynamic from "next/dynamic";
 const GitHubCalendar = dynamic(() => import("react-github-calendar"), { ssr: false });
 // import LeetCodeCalendar from 'leetcode-calendar';

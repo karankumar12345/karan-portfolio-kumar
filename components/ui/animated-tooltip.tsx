@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import Image from "next/image";
@@ -80,8 +80,8 @@ export const AnimatedTooltip = ({
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
-            src={icon}
-            alt={icon}
+            src={icon||"https://static-00.iconduck.com/assets.00/next-js-icon-2048x2048-5dqjgeku.png"}
+            alt={icon ||"nextjs"}
             className="relative !m-0 h-14 w-14 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
           />
         </div>

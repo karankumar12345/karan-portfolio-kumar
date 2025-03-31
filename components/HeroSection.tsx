@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ColourfulText } from "./ui/ColorFull-Text";
-import Link from "next/link";
+
 
 const HeroSection = () => {
   return (
