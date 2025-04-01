@@ -58,7 +58,7 @@ export default function ProjectSection() {
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white"
                   >
-                    <ColourfulText text="Frontend Repo" />
+                    Frontend Repo
                   </a>
                 )}
                 {project.github.backend && (
@@ -68,7 +68,7 @@ export default function ProjectSection() {
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white"
                   >
-                    <ColourfulText text="Backend Repo" />
+                    Backend Repo
                   </a>
                 )}
               </div>

@@ -64,13 +64,13 @@ const AboutSection = () => {
           
           {/* Social Links */}
           <div className="mt-6 flex justify-center md:justify-start gap-6 text-2xl">
-            <a href="https://github.com/yourgithub" target="_blank" className="text-gray-300 hover:text-white transition">
+            <a href="https://github.com/karankumar12345" target="_blank" className="text-gray-300 hover:text-white transition">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" className="text-gray-300 hover:text-white transition">
+            <a href="https://www.linkedin.com/in/karan-kumar-823190256/" target="_blank" className="text-gray-300 hover:text-white transition">
               <FaLinkedin />
             </a>
-            <a href="https://leetcode.com/yourleetcode" target="_blank" className="text-gray-300 hover:text-white transition">
+            <a href="https://leetcode.com/Karan1_2" target="_blank" className="text-gray-300 hover:text-white transition">
               <FaCode />
             </a>
           </div>

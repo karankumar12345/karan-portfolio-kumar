@@ -17,10 +17,10 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
       >
         <h1 className="text-5xl md:text-6xl font-extrabold">
-          Hi, I&apos;m <ColourfulText text="Karan Kumar" />
+          Hi, I&apos;m <ColourfulText text="Karan " />Kumar
         </h1>
         <p className=" text-lg md:text-xl text-gray-300 mt-4 max-w-xl">
-          A passionate <ColourfulText text="MERN Stack Developer" /> 🚀  
+          A passionate <ColourfulText text="MERN Stack " />Developer 🚀  
           I build interactive web applications with modern technologies.
         </p>
         <div className="mt-6 flex space-x-4 mb-3">

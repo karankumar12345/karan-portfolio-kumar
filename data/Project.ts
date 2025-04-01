@@ -44,7 +44,7 @@ const projects = [
       github: {
         frontend: "https://github.com/karankumar12345/ai-mock-interview"
       },
-      demo: "https://ai-coaching-voice-agent.vercel.app/"
+      demo: "https://ai-mock-interview-karan.vercel.app/"
     },
     {
       name: "BTech Burger Vala",
