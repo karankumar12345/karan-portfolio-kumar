@@ -1,52 +1,83 @@
 "use client";
 import { motion } from "framer-motion";
 import { ColourfulText } from "./ui/ColorFull-Text";
-import { 
-  IconBrandReact, 
-  IconBrandNodejs, 
-  IconBrandMongodb, 
-  IconBrandNextjs, 
-  IconBrandTypescript, 
-  IconBrandTailwind, 
-  IconBrandDocker, 
-  IconBrandAws, 
-  IconBrandFirebase, 
-  IconBrandGit, 
-  IconDatabase, 
-  IconServer,
-  IconBrandCpp,
+import {
+  IconBrandReact,
+  IconBrandNodejs,
+  IconBrandMongodb,
+  IconBrandNextjs,
+  IconBrandTypescript,
+  IconBrandTailwind,
   IconBrandJavascript,
-  IconBrandPython,
-  IconBrandVscode,
-  IconBrandVercel,
+  IconBrandRedux,
+  IconBrandSocketIo,
+  IconBrandGit,
+  IconTopologyComplex,
+  IconPhoneCall,
+  IconShieldLock,
+  IconCloudComputing,
+  IconDatabase,
+  IconServer,
 } from "@tabler/icons-react";
 
 const technologies = [
-  { name: "C++", icon: <IconBrandCpp size={40} className="text-blue-500" />, category: "Languages", level: "Advanced" },
-  { name: "JavaScript", icon: <IconBrandJavascript size={40} className="text-yellow-400" />, category: "Languages", level: "Expert" },
-  { name: "TypeScript", icon: <IconBrandTypescript size={40} className="text-blue-500" />, category: "Languages", level: "Advanced" },
-  { name: "Python", icon: <IconBrandPython size={40} className="text-green-500" />, category: "Languages", level: "Intermediate" },
-  { name: "React.js", icon: <IconBrandReact size={40} className="text-blue-400" />, category: "Frontend", level: "Expert" },
-  { name: "Next.js", icon: <IconBrandNextjs size={40} className="text-white" />, category: "Frontend", level: "Advanced" },
-  { name: "Node.js", icon: <IconBrandNodejs size={40} className="text-green-500" />, category: "Backend", level: "Expert" },
-  { name: "Express.js", icon: <IconServer size={40} className="text-gray-400" />, category: "Backend", level: "Advanced" },
-  { name: "MongoDB", icon: <IconBrandMongodb size={40} className="text-green-400" />, category: "Database", level: "Advanced" },
-  { name: "Neon DB", icon: <IconDatabase size={40} className="text-pink-400" />, category: "Database", level: "Intermediate" },
-  { name: "Drizzle ORM", icon: <IconDatabase size={40} className="text-blue-400" />, category: "Database", level: "Intermediate" },
-  { name: "Redis", icon: <IconDatabase size={40} className="text-red-500" />, category: "Database", level: "Intermediate" },
-  { name: "Appwrite", icon: <IconDatabase size={40} className="text-purple-500" />, category: "Backend", level: "Intermediate" },
-  { name: "Firebase", icon: <IconBrandFirebase size={40} className="text-yellow-500" />, category: "Backend", level: "Advanced" },
-  { name: "Tailwind CSS", icon: <IconBrandTailwind size={40} className="text-teal-400" />, category: "Frontend", level: "Expert" },
-  { name: "Docker", icon: <IconBrandDocker size={40} className="text-blue-500" />, category: "DevOps", level: "Intermediate" },
-  { name: "AWS", icon: <IconBrandAws size={40} className="text-yellow-400" />, category: "DevOps", level: "Intermediate" },
-  { name: "Git & GitHub", icon: <IconBrandGit size={40} className="text-gray-400" />, category: "Tools", level: "Expert" },
-  { name: "VS Code", icon: <IconBrandVscode size={40} className="text-blue-400" />, category: "Tools", level: "Expert" },
-  { name: "Vercel", icon: <IconBrandVercel size={40} className="text-white" />, category: "Tools", level: "Advanced" },
-  { name: "REST APIs", icon: <IconServer size={40} className="text-green-500" />, category: "Backend", level: "Expert" },
-  { name: "Real-Time Collaboration", icon: <IconServer size={40} className="text-purple-400" />, category: "Features", level: "Advanced" },
+  { name: "JavaScript (ES2022+)", icon: <IconBrandJavascript size={28} className="text-yellow-300" />, category: "Languages", level: "Expert" },
+  { name: "TypeScript", icon: <IconBrandTypescript size={28} className="text-blue-400" />, category: "Languages", level: "Expert" },
+  { name: "C++", icon: <IconTopologyComplex size={28} className="text-indigo-300" />, category: "Languages", level: "Advanced" },
+  { name: "SQL", icon: <IconDatabase size={28} className="text-cyan-300" />, category: "Languages", level: "Advanced" },
+
+  { name: "React.js", icon: <IconBrandReact size={28} className="text-sky-400" />, category: "Frontend", level: "Expert" },
+  { name: "Next.js 14/15", icon: <IconBrandNextjs size={28} className="text-white" />, category: "Frontend", level: "Expert" },
+  { name: "Redux Toolkit", icon: <IconBrandRedux size={28} className="text-purple-300" />, category: "Frontend", level: "Advanced" },
+  { name: "Tailwind CSS", icon: <IconBrandTailwind size={28} className="text-teal-300" />, category: "Frontend", level: "Expert" },
+  { name: "RTK Query", icon: <IconBrandRedux size={28} className="text-violet-300" />, category: "Frontend", level: "Advanced" },
+
+  { name: "Node.js", icon: <IconBrandNodejs size={28} className="text-green-400" />, category: "Backend", level: "Expert" },
+  { name: "Express.js", icon: <IconServer size={28} className="text-slate-300" />, category: "Backend", level: "Expert" },
+  { name: "RESTful APIs", icon: <IconServer size={28} className="text-emerald-300" />, category: "Backend", level: "Expert" },
+  { name: "Microservices", icon: <IconCloudComputing size={28} className="text-blue-300" />, category: "Backend", level: "Advanced" },
+  { name: "MVC Architecture", icon: <IconTopologyComplex size={28} className="text-rose-300" />, category: "Backend", level: "Advanced" },
+
+  { name: "MongoDB", icon: <IconBrandMongodb size={28} className="text-green-400" />, category: "Databases", level: "Advanced" },
+  { name: "MySQL", icon: <IconDatabase size={28} className="text-blue-300" />, category: "Databases", level: "Advanced" },
+  { name: "PostgreSQL", icon: <IconDatabase size={28} className="text-indigo-300" />, category: "Databases", level: "Advanced" },
+  { name: "Redis Pub/Sub", icon: <IconDatabase size={28} className="text-red-400" />, category: "Databases", level: "Advanced" },
+  { name: "Sequelize ORM", icon: <IconDatabase size={28} className="text-teal-300" />, category: "Databases", level: "Advanced" },
+
+  { name: "WebRTC", icon: <IconPhoneCall size={28} className="text-lime-300" />, category: "Real-Time", level: "Expert" },
+  { name: "WebSockets", icon: <IconBrandSocketIo size={28} className="text-zinc-200" />, category: "Real-Time", level: "Expert" },
+  { name: "Socket.IO", icon: <IconBrandSocketIo size={28} className="text-white" />, category: "Real-Time", level: "Expert" },
+  { name: "Event-Driven Architecture", icon: <IconTopologyComplex size={28} className="text-orange-300" />, category: "Real-Time", level: "Advanced" },
+  { name: "Live Synchronization", icon: <IconBrandSocketIo size={28} className="text-cyan-300" />, category: "Real-Time", level: "Advanced" },
+
+  { name: "Asterisk PBX", icon: <IconPhoneCall size={28} className="text-emerald-300" />, category: "Telephony", level: "Advanced" },
+  { name: "JsSIP", icon: <IconPhoneCall size={28} className="text-fuchsia-300" />, category: "Telephony", level: "Advanced" },
+  { name: "SIP Trunking", icon: <IconPhoneCall size={28} className="text-purple-300" />, category: "Telephony", level: "Advanced" },
+  { name: "STUN / TURN", icon: <IconPhoneCall size={28} className="text-sky-300" />, category: "Telephony", level: "Advanced" },
+  { name: "IVR / ACD Queues", icon: <IconPhoneCall size={28} className="text-yellow-300" />, category: "Telephony", level: "Advanced" },
+
+  { name: "JWT Auth", icon: <IconShieldLock size={28} className="text-blue-300" />, category: "Security", level: "Expert" },
+  { name: "2FA", icon: <IconShieldLock size={28} className="text-green-300" />, category: "Security", level: "Advanced" },
+  { name: "Account Lockout", icon: <IconShieldLock size={28} className="text-amber-300" />, category: "Security", level: "Advanced" },
+  { name: "Hierarchical RBAC", icon: <IconShieldLock size={28} className="text-rose-300" />, category: "Security", level: "Advanced" },
+
+  { name: "Cloudinary", icon: <IconCloudComputing size={28} className="text-blue-300" />, category: "DevOps & Tools", level: "Advanced" },
+  { name: "VdoCipher", icon: <IconCloudComputing size={28} className="text-purple-300" />, category: "DevOps & Tools", level: "Advanced" },
+  { name: "Git & GitHub", icon: <IconBrandGit size={28} className="text-zinc-200" />, category: "DevOps & Tools", level: "Expert" },
+  { name: "GitHub Actions", icon: <IconBrandGit size={28} className="text-zinc-100" />, category: "DevOps & Tools", level: "Advanced" },
+  { name: "Postman", icon: <IconServer size={28} className="text-orange-300" />, category: "DevOps & Tools", level: "Advanced" },
 ];
 
-const categories = ["Languages", "Frontend", "Backend", "Database", "DevOps", "Tools", "Features"];
+const categories = [
+  "Languages",
+  "Frontend",
+  "Backend",
+  "Databases",
+  "Real-Time",
+  "Telephony",
+  "Security",
+  "DevOps & Tools",
+];
 
 const levelColors = {
   Expert: "bg-green-500/20 text-green-400",
@@ -56,25 +87,39 @@ const levelColors = {
 
 const TechStack = () => {
   return (
-    <section id="techstack" className="py-20 px-4 sm:px-6 bg-gradient-to-b from-gray-800 to-gray-900 text-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="techstack" className="px-4 py-20 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            <ColourfulText text="Tech Stack & Technologies" />
+            <ColourfulText text="Skills & Technical Arsenal" />
           </h2>
-          <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto px-4">
-            I specialize in <ColourfulText text="MERN Stack" /> development and scalable, high-performance applications. 
-            Below are the technologies I work with, organized by category:
+          <p className="mx-auto max-w-3xl px-4 text-base text-gray-300 sm:text-lg">
+            Resume-aligned strengths across full stack engineering, real-time systems, telephony infrastructure, and production-grade security.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-blue-500/20 to-cyan-500/10 p-5">
+            <p className="text-xs uppercase tracking-widest text-slate-200">Core Focus</p>
+            <p className="mt-2 text-lg font-semibold text-white">Scalable product engineering</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-purple-500/20 to-fuchsia-500/10 p-5">
+            <p className="text-xs uppercase tracking-widest text-slate-200">Real-Time Delivery</p>
+            <p className="mt-2 text-lg font-semibold text-white">Sub-100ms state synchronization mindset</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/20 to-green-500/10 p-5">
+            <p className="text-xs uppercase tracking-widest text-slate-200">Reliability</p>
+            <p className="mt-2 text-lg font-semibold text-white">Security-first, production-ready architecture</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-4">
           {categories.map((category, index) => (
             <motion.div
               key={category}
@@ -82,10 +127,10 @@ const TechStack = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gray-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
+              className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/20 sm:p-6"
             >
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">{category}</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <h3 className="mb-4 text-lg font-semibold text-blue-300">{category}</h3>
+              <div className="grid grid-cols-1 gap-3">
                 {technologies
                   .filter(tech => tech.category === category)
                   .map((tech, techIndex) => (
@@ -95,18 +140,16 @@ const TechStack = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: techIndex * 0.1 }}
-                      className="group flex items-center gap-3 p-3 rounded-lg bg-gray-700/30 hover:bg-gray-700/50 transition-all duration-300"
+                      className="group flex items-center justify-between gap-3 rounded-xl border border-white/5 bg-black/20 p-3 transition-all duration-300 hover:border-white/15 hover:bg-white/5"
                     >
-                      <div className="relative">
-                        {tech.icon}
-                        <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="flex items-center gap-3">
+                        <div className="relative">
+                          {tech.icon}
+                          <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        </div>
+                        <span className="text-sm text-gray-200">{tech.name}</span>
                       </div>
-                      <div className="flex flex-col">
-                        <span className="text-sm text-gray-300">{tech.name}</span>
-                        <span className={`text-xs px-2 py-0.5 rounded-full ${levelColors[tech.level as keyof typeof levelColors]}`}>
-                          {tech.level}
-                        </span>
-                      </div>
+                      <span className={`rounded-full px-2 py-0.5 text-[10px] sm:text-xs ${levelColors[tech.level as keyof typeof levelColors]}`}>{tech.level}</span>
                     </motion.div>
                   ))}
               </div>
@@ -119,11 +162,10 @@ const TechStack = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-16 text-center"
+          className="mt-14 text-center"
         >
-          <p className="text-gray-400 max-w-2xl mx-auto px-4">
-            I'm constantly learning and exploring new technologies to stay at the forefront of web development.
-            My tech stack evolves with the industry's best practices and emerging trends.
+          <p className="mx-auto max-w-2xl px-4 text-gray-400">
+            Focused on building robust systems that are secure, maintainable, and built for scale from day one.
           </p>
         </motion.div>
       </div>

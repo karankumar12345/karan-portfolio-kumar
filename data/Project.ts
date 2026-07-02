@@ -7,8 +7,29 @@ const projects = [
       frontend: "https://github.com/karankumar12345/LMS-FRONTEND",
       backend: "https://github.com/karankumar12345/LMS-BACKEND"
     },
+    highlights: [
+      "AI-powered mock interview workflows",
+      "Secure video delivery with VdoCipher",
+      "Role-aware dashboard and learning modules"
+    ],
     videoUrl: "/videos/lms.mp4",
     demo: "https://learning-bac.vercel.app/"
+  },
+  {
+    name: "NextGen Backend System",
+    description: "A production-grade backend platform built with Node.js and Express to demonstrate secure authentication, session management, Redis caching, RBAC, and real-time collaboration architecture.",
+    techStack: ["Node.js", "Express.js", "MySQL", "PostgreSQL", "Sequelize", "Redis", "Socket.IO", "JWT"],
+    github: {
+      frontend: "https://github.com/karankumar12345/nextgen-frontend-system",
+      backend: "https://github.com/karankumar12345/nextgen-backend-system"
+    },
+    highlights: [
+      "JWT access/refresh token strategy with multi-device sessions",
+      "Security hardening: account lockout, rate limiting, request validation, and audit logs",
+      "Socket.IO-based collaborative rooms with chat, live code sync, and snapshots",
+      "Scalable modular architecture with Redis-backed real-time support"
+    ],
+    demo: null
   },
   {
     name: "AcePrep",
@@ -17,6 +38,10 @@ const projects = [
     github: {
       frontend: "https://github.com/karankumar12345/aceprep"
     },
+    highlights: [
+      "Mock interview workflows with role-based prep tracks",
+      "Performance analytics and practice roadmap"
+    ],
     videoUrl: "/videos/aceprep1.mp4",
     demo: "https://aceprepkaran-lucx.vercel.app/"
   },
