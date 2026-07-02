@@ -14,8 +14,12 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #050816;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }

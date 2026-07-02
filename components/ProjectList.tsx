@@ -1,9 +1,8 @@
 "use client";
 import projects from "@/data/Project";
 import { ColourfulText } from "./ui/ColorFull-Text";
-import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaPlay } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaPlay, FaCodeBranch } from "react-icons/fa";
 
 const techIcons: Record<string, string> = {
   "Next.js": "/next13.svg",
@@ -22,6 +21,12 @@ const techIcons: Record<string, string> = {
   "VAPI": "/vapi.jpg",
   "Firebase": "/firebase.png",
   "Aceternity UI": "/Aceternity UI.png",
+  "Socket.IO": "/socketio.svg",
+  "JWT": "/jwt.svg",
+  "Redis": "/redis.svg",
+  "Sequelize": "/sequelize.svg",
+  "MySQL": "/mysql.svg",
+  "PostgreSQL": "/postgresql.svg",
 };
 
 const containerVariants = {
@@ -47,13 +52,13 @@ const itemVariants = {
 
 export default function ProjectSection() {
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-gray-900 to-gray-800 text-white lg:p-[10%]" id="Projects">
+    <section className="px-4 py-20 text-white sm:px-6 lg:px-10" id="Projects">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={containerVariants}
-        className="max-w-7xl mx-auto"
+        className="mx-auto max-w-7xl"
       >
         <motion.h2 
           variants={itemVariants}
@@ -62,17 +67,16 @@ export default function ProjectSection() {
           <ColourfulText text="Featured Projects" />
         </motion.h2>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
         >
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group relative bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/20"
             >
-              {/* Video Preview */}
               {project.videoUrl && (
                 <div className="relative mb-4 rounded-lg overflow-hidden aspect-video">
                   <video
@@ -90,25 +94,41 @@ export default function ProjectSection() {
                 </div>
               )}
 
-              <h3 className="text-2xl font-semibold mb-3">
+              <h3 className="mb-3 text-2xl font-semibold">
                 <ColourfulText text={project.name} />
               </h3>
               
-              <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
+              <p className="mb-5 text-gray-300 leading-relaxed">{project.description}</p>
+
+              {project.highlights && (
+                <ul className="mb-5 space-y-1 text-sm text-slate-300">
+                  {project.highlights.slice(0, 4).map((item, itemIdx) => (
+                    <li key={itemIdx} className="flex items-start gap-2">
+                      <FaCodeBranch className="mt-1 text-[10px] text-blue-300" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
               
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.techStack.map((tech, idx: number) => (
-                  <AnimatedTooltip
+                  <span
                     key={idx}
-                    id={idx}
-                    icon={techIcons[tech]}
-                    name={tech}
-                  />
+                    className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-xs text-slate-200"
+                    style={{
+                      backgroundImage: techIcons[tech] ? `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${techIcons[tech]})` : undefined,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
 
               <div className="flex justify-between items-center pt-4 border-t border-gray-700/50">
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                   {project.github.frontend && (
                     <a
                       href={project.github.frontend}

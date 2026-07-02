@@ -2,120 +2,81 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ColourfulText } from "./ui/ColorFull-Text";
-import MagicButton from "./ui/MagicButton";
-import { FaLocationArrow, FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaCode, FaDownload } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-b from-gray-900 to-black text-white px-4 sm:px-6 lg:px-8" id="Home">
-      {/* Left Side - Text Content */}
-      <motion.div
-        className="md:w-1/2 flex flex-col items-center lg:ml-[10%] md:items-start space-y-6"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+    <section
+      className="relative flex min-h-screen items-center px-4 pb-16 pt-28 sm:px-6 lg:px-10"
+      id="Home"
+    >
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-2">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          className="space-y-7"
+          initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-center md:text-left"
+          transition={{ duration: 0.7 }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-            Hi, I&apos;m <ColourfulText text="Karan " />Kumar
+          <span className="inline-flex rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-blue-200">
+            Full Stack Engineer | Real-Time Systems & WebRTC
+          </span>
+          <h1 className="text-4xl font-black leading-tight sm:text-5xl md:text-6xl">
+            Architecting scalable platforms with <ColourfulText text="sub-100ms real-time delivery" />
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mt-4 max-w-xl">
-            A passionate <ColourfulText text="MERN Stack " />Developer 🚀  
-            I build interactive web applications with modern technologies.
+          <p className="max-w-2xl text-base text-slate-300 sm:text-lg">
+            I am Karan Kumar. I build production-grade telecom pipelines, secure multi-tenant SaaS matrices, and high-throughput systems that turn intensive, event-driven requirements into seamless user experiences.
           </p>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <a
+              href="mailto:karankumar2004122@gmail.com"
+              className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-500"
+            >
+              Hire Me
+            </a>
+            <a
+              href="/Karan_Kumar_Full_Stack_Developer_Resume.pdf"
+              download="Karan_Kumar_Resume.pdf"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              <FaDownload />
+              Download Resume
+            </a>
+          </div>
+
+          <div className="flex items-center gap-5 text-2xl text-slate-300">
+            <a href="https://github.com/karankumar12345" target="_blank" rel="noopener noreferrer" className="transition hover:scale-110 hover:text-white">
+              <FaGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/karan-kumar-823190256/" target="_blank" rel="noopener noreferrer" className="transition hover:scale-110 hover:text-white">
+              <FaLinkedin />
+            </a>
+            <a href="https://leetcode.com/Karan1_2" target="_blank" rel="noopener noreferrer" className="transition hover:scale-110 hover:text-white">
+              <FaCode />
+            </a>
+          </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+          className="flex justify-center lg:justify-end"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
         >
-          <a
-            href="/karan-resume.pdf"
-            download="Karan_Kumar_Resume.pdf"
-            className="px-6 py-3 border-2 border-white rounded-lg text-white font-semibold hover:bg-white hover:text-black transition duration-300 text-center"
-          >
-            <ColourfulText text="Download Resume" />
-          </a>
-
-          <a href="mailto:karankumar2004122@gmail.com" className="w-full sm:w-auto">
-            <MagicButton
-              title="Let's get in touch"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-r from-blue-500/40 via-purple-500/30 to-cyan-500/40 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-slate-950/70 p-4 backdrop-blur-md">
+              <Image
+                src="/karan-insta-pic.jpeg"
+                alt="Karan Kumar"
+                width={420}
+                height={420}
+                className="h-[280px] w-[280px] rounded-2xl object-cover sm:h-[360px] sm:w-[360px]"
+              />
+            </div>
+          </div>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="flex gap-6 text-2xl mt-4"
-        >
-          <a 
-            href="https://github.com/karankumar12345" 
-            target="_blank" 
-            className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-          >
-            <FaGithub />
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/karan-kumar-823190256/" 
-            target="_blank" 
-            className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-          >
-            <FaLinkedin />
-          </a>
-          <a 
-            href="https://leetcode.com/Karan1_2" 
-            target="_blank" 
-            className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-          >
-            <FaCode />
-          </a>
-        </motion.div>
-      </motion.div>
-
-      {/* Right Side - Profile Image */}
-      <motion.div
-        className="md:w-1/2 flex justify-center mt-8 md:mt-0"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-<div className="relative hidden sm:block">
-  <motion.div
-    animate={{
-      boxShadow: [
-        "0 0 0 0 rgba(59, 130, 246, 0.4)",
-        "0 0 0 20px rgba(59, 130, 246, 0)",
-        "0 0 0 0 rgba(59, 130, 246, 0.4)"
-      ]
-    }}
-    transition={{
-      duration: 2,
-      repeat: Infinity,
-      repeatType: "loop"
-    }}
-    className="absolute inset-0 rounded-full"
-  />
-  <Image
-    src="/karankumar.jpg"
-    alt="Karan Kumar"
-    width={300}
-    height={300}
-    className="rounded-full border-4 border-blue-500 shadow-lg relative z-10 hover:scale-105 transition-transform duration-300"
-  />
-</div>
-
-      </motion.div>
+      </div>
     </section>
   );
 };

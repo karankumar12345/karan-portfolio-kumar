@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
 import { FaLocationArrow, FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
 
@@ -30,22 +29,20 @@ const socialMedia = [
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10 bg-gradient-to-b from-gray-900 to-black text-white" id="contact">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="w-full pb-10 pt-20 text-white" id="contact">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center justify-center text-center"
+          className="rounded-3xl border border-white/10 bg-white/[0.03] px-6 py-10 text-center backdrop-blur-sm"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            Ready to take <span className="text-purple">your</span> digital
-            presence to the next level?
+            Let&apos;s build your next <span className="text-blue-400">high-impact</span> product
           </h1>
           <p className="text-gray-300 md:mt-6 my-4 text-lg max-w-2xl">
-            Reach out to me today and let&apos;s discuss how I can help you
-            achieve your goals.
+            Open to full-time roles, freelance projects, and product collaborations in full-stack development and real-time applications.
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -67,7 +64,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-16 flex flex-col-reverse md:flex-row justify-between items-center gap-8"
+          className="mt-10 flex flex-col-reverse items-center justify-between gap-8 md:flex-row"
         >
           <p className="text-gray-400 text-sm md:text-base">
             Copyright © {new Date().getFullYear()} Karan Kumar. All rights reserved.

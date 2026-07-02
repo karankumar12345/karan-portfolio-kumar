@@ -2,105 +2,80 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ColourfulText } from "./ui/ColorFull-Text";
-import { FaGithub, FaLinkedin, FaCode, FaDownload } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900 text-white">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="px-4 py-20 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl rounded-3xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-xl sm:p-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="mb-12 text-center"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            About <ColourfulText text="Me" />
+          <h2 className="mb-5 text-3xl font-bold sm:text-4xl md:text-5xl">
+            About <ColourfulText text="Me" /> & My Approach
           </h2>
+          <p className="mx-auto max-w-3xl text-sm text-slate-300 sm:text-base">
+            I architect mission-critical communication layers, secure multi-tenant backends, and low-latency systems engineered to handle real user traffic under heavy load.
+          </p>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* Left Side - Profile Image */}
+        <div className="grid items-center gap-10 lg:grid-cols-[300px_1fr]">
           <motion.div
-            className="w-64 h-64 md:w-80 md:h-80 relative"
+            className="relative mx-auto h-60 w-60 sm:h-72 sm:w-72"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 animate-pulse" />
-            <div className="absolute inset-2 rounded-full overflow-hidden border-4 border-white/20">
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 blur-xl" />
+            <div className="absolute inset-2 overflow-hidden rounded-3xl border border-white/15">
               <Image
-                src="/karankumar.jpg"
+                src="/karan-insta-pic.jpeg"
                 alt="Karan Kumar"
                 width={320}
                 height={320}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
           </motion.div>
 
-          {/* Right Side - About Me Text */}
           <motion.div
-            className="flex-1 text-center md:text-left space-y-6"
+            className="space-y-6 text-center md:text-left"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="space-y-4">
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Hi! I&apos;m <ColourfulText text="Karan Kumar" />, a passionate{" "}
-                <ColourfulText text="MERN Stack Developer" /> with a deep love for creating 
-                scalable, high-performance web applications. I specialize in building interactive 
-                user experiences using modern technologies like <ColourfulText text="React, Next.js, Node.js, MongoDB, Express.js" /> and more.
+            <div className="space-y-4 rounded-2xl border border-white/10 bg-black/20 p-5">
+              <p className="text-base leading-relaxed text-gray-300 sm:text-lg">
+                Hi! I&apos;m <ColourfulText text="Karan Kumar" />, a Full Stack Engineer specialized in building high-scale production apps using <ColourfulText text="Next.js, TypeScript, Node.js, and Redis" />. Currently, I engineer real-time healthcare telephony platforms scaling to <ColourfulText text="30,000+ monthly calls" /> with sub-100ms state responsiveness.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                🚀 In addition to development, I am highly skilled in <ColourfulText text="Data Structures & Algorithms (DSA)" />.
-                I have solved <ColourfulText text="500+ problems on LeetCode" />, focusing on optimizing 
-                solutions for time and space complexity. Problem-solving is a core part of my mindset!
+              <p className="text-base leading-relaxed text-gray-300 sm:text-lg">
+                My core expertise lies in bridging communication protocols like <ColourfulText text="WebRTC, JsSIP, and Asterisk PBX" /> alongside production-grade security patterns like strict multi-device session handling, advanced RBAC models, and data isolation layers.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                I am always eager to learn, collaborate, and take on new challenges. Whether it&apos;s 
-                developing <ColourfulText text="real-time applications" />, working with <ColourfulText text="AI integrations" />, or crafting  
-                <ColourfulText text="scalable solutions" />, I love turning ideas into reality.
+              <p className="text-base leading-relaxed text-gray-300 sm:text-lg">
+                Backed by deep algorithmic discipline with <ColourfulText text="500+ LeetCode solutions" /> focused on Dynamic Programming and Advanced Graphs, I focus on system bottlenecks, memory optimizations, and writing predictable, highly maintainable code.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
               <a
-                href="/karan-resume.pdf"
+                href="/Karan_Kumar_Full_Stack_Developer_Resume.pdf"
                 download="Karan_Kumar_Resume.pdf"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700 transition duration-300"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-blue-500"
               >
                 <FaDownload />
                 Download Resume
               </a>
-            </div>
-            
-            {/* Social Links */}
-            <div className="flex justify-center md:justify-start gap-6 text-2xl">
-              <a 
-                href="https://github.com/karankumar12345" 
-                target="_blank" 
-                className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
+              <a
+                href="mailto:karankumar2004122@gmail.com"
+                className="inline-flex items-center justify-center rounded-xl border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
               >
-                <FaGithub />
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/karan-kumar-823190256/" 
-                target="_blank" 
-                className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-              >
-                <FaLinkedin />
-              </a>
-              <a 
-                href="https://leetcode.com/Karan1_2" 
-                target="_blank" 
-                className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-              >
-                <FaCode />
+                Let&apos;s Collaborate
               </a>
             </div>
           </motion.div>
