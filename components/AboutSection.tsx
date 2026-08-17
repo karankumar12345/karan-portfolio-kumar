@@ -64,7 +64,7 @@ const AboutSection = () => {
             
             <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
               <a
-                href="/Karan_Kumar_Full_Stack_Developer_Resume.pdf"
+                href="/Karan-Kumar-Full-Stack-Developer-Resume.pdf"
                 download="Karan_Kumar_Resume.pdf"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-blue-500"
               >
