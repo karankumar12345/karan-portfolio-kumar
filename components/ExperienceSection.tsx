@@ -27,7 +27,7 @@ const ExperienceSection = () => {
             </div>
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm text-purple-200">
               <FaCalendarAlt />
-              Apr 2025 - Present
+              Apr 2025 - July 2026
             </div>
           </div>
 
