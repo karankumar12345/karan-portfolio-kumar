@@ -35,7 +35,7 @@ const HeroSection = () => {
               Hire Me
             </a>
             <a
-              href="/Karan_Kumar_Full_Stack_Developer_Resume.pdf"
+              href="/Karan-Kumar-Full-Stack-Developer-Resume.pdf"
               download="Karan_Kumar_Resume.pdf"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
